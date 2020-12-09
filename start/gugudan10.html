@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단 함수 만들기</h1>
+    <script>
+        var calGugudan = function(n) {
+            document.write("<h2>" + n + "단</h2>");
+            for(i = 2; i <= 9; i++){
+                document.write(n + " X " + i + " = " + (n * i) + "<br>");
+            }
+        }
+
+        var main = function(n){
+            console.log('함수가 실행되었습니다.')
+            for(var i = 2; i <= n; i++) {
+               calGugudan(i)
+            }
+        }
+
+        main(9);
+    
+    </script>
+</body>
+</html>
