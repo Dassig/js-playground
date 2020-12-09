@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plusMission</title>
+</head>
+<body>
+<script>
+    var str = prompt("두 수를 입력하세요!(x * y)구구단. y까지 출력합니다")
+    var num = str.split(',');
+    var x = Number(num[0]);
+    var y = Number(num[1]);
+
+    // var foo = function(a, b) {
+    //     document.write("앞의 숫자" + a + "뒤에 숫자" + b)
+    //     }
+
+    // foo(x,y)
+
+    for (var i = 2; i <= x; i++){
+        document.write("<h2>" + i + "단입니다.</h2>")
+        for(var j = 2; j <= y; j++){
+            document.write( i + " X " + j + " = " + (i * j) + "<br>")
+        }
+    }
+</script>
+</body>
+</html>
