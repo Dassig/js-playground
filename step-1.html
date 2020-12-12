@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1단계 : 단어 밀어내기 구현하기</title>
+</head>
+<body>
+    <h1>1단계 : 단어 밀어내기 구현하기</h1>
+    <script>
+    var str = prompt("값을 입력하세요.(단어 하나, 정수 숫자 하나( -100 <= N < 100) , L 또는 R, *구분은 띄어쓰기로 해주세요!)")
+    var liStr = str.split(' ');
+    var a = liStr[0]; // 단어
+    var b = Number(liStr[1]) % a.length; //옮기는 수
+    var c = liStr[2].toLowerCase(); // 방향
+    
+    function toLeft(){ //왼쪽으로가기
+        reB = Math.abs(b)
+        var result = a.substring(reB,) + a.substring(0,reB)
+        document.write(result)
+    }
+    function toright() { //오른쪽으로 가기
+        b = Math.abs(b)
+        var strCal = length.a - b
+        var result = a.substring(strCal,) + a.substring(0,strCal)
+        document.write(result)
+    }
+
+    // document.write(c+"<br>")
+    // document.write(Math.sign(b)+"<br>")
+
+    if (Math.sign(b) === -1) {
+        if ( c === "r") {
+            toLeft();
+        } else{
+            toright();
+        }
+    }else if (Math.sign(b) === 1) {
+        if (c === "l") {
+            toLeft();
+        } else {
+            toright();
+        }
+    }else {
+        document.write(a)
+    }
+    </script>
+</body>
+</html>
