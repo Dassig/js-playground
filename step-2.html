@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #out {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<h2>기본 평면 큐브</h2>
+<div id="out"></div>
+<div>
+CUBE : <input type="text" id="val">
+<button onclick="Round()">출력</button>
+</div>
+<div id="round"></div>
+
+<body>
+    <script>
+        var a1 = ["R", "R", "W"];
+        var a2 = ["G", "C", "W"];
+        var a3 = ["G", "B", "B"];
+
+        document.getElementById('out').innerHTML = a1.join(" ") + '<br>' + a2.join(" ") +"<br>" + a3.join(" ");
+
+        var operate = {};
+        operate.print = function(str) { 
+            document.getElementById('round').innerHTML += str+"<br>";
+           document.getElementById('round').innerHTML += a1.join(" ") + '<br>' + a2.join(" ") +"<br>" + a3.join(" ")+ "<br><br>";
+
+        }
+        
+        var transStr = [];
+       
+        var Round = function(){
+            var str = document.getElementById('val').value;
+            var transStr = str.split('');
+        for(i = 0; i < transStr.length; i++) {
+      
+            if (transStr[i] === "U") {
+            var x = a1.shift();
+            a1.push(x);
+           } else if(transStr[i] === "R") {
+            var x1 = a1.pop();
+            var x2 = a2.pop();
+            var x3 = a3.pop();
+            a1.push(x2);
+            a2.push(x3);
+            a3.push(x1);
+            } else if (transStr[i] === "L") {
+            var x1 = a1.shift();
+            var x2 = a2.shift();
+            var x3 = a3.shift();
+            a1.unshift(x3);
+            a2.unshift(x1);
+            a3.unshift(x2);
+            } else if (transStr[i] === "B") {
+            var x = a3.pop();
+            a3.unshift(x);
+            } else if (transStr[i] === "Q") {
+                document.getElementById('round').innerHTML += "Bye~"
+                document.getElementById('val').value = "프로그램 끝났어요!";
+                break;
+            } else if (a.indexof("'") === -1)
+
+            operate.print(transStr[i]);
+        }
+    }
+
+        
+    </script>
+</body>
+</html>
