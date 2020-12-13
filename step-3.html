@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #out {
-            margin-bottom: 20px;
+        #out1 {
+            margin: 5px;
+            margin-left: 90px;
+        }
+        #upOut {
+            display: grid;
+            grid-template-columns: 60px 50px 50px 50px;
+            margin: 5px;
+        }
+        #out6 {
+            margin: 5px;
+            margin-left: 90px;
         }
     </style>
 </head>
 <h2>기본 평면 큐브</h2>
-<div id="out"></div>
+<div id="out1"></div>
+<div id="upOut">
+    <div id="out2"></div>
+    <div id="out3"></div>
+    <div id="out4"></div>
+    <div id="out5"></div>
+</div>
+<div id="out6"></div>
 <div>
 CUBE : <input type="text" onclick="this.select()" id="val">
 <button onclick="Round()">출력</button>
@@ -21,12 +38,37 @@ CUBE : <input type="text" onclick="this.select()" id="val">
 <body>
     <script>
         document.getElementById('val').value = "(띄워쓰기로 구분해주세요!)"
-    
-        var a1 = ["R", "R", "W"];
-        var a2 = ["G", "C", "W"];
-        var a3 = ["G", "B", "B"];
+        var str = ["B", "W", "O", "G", "Y","R"]
+        var b1 = ["B", "B", "B"];
+        var b2 = ["B", "B", "B"];
+        var b3 = ["B", "B", "B"];
 
-        document.getElementById('out').innerHTML = a1.join(" ") + '<br>' + a2.join(" ") +"<br>" + a3.join(" ");
+        var w1 = ["W", "W", "W"];
+        var w2 = ["W", "W", "W"];
+        var w3 = ["W", "W", "W"];
+
+        var o1 = ["O", "O", "O"];
+        var o2 = ["O", "O", "O"];
+        var o3 = ["O", "O", "O"];
+
+        var g1 = ["G", "G", "G"];
+        var g2 = ["G", "G", "G"];
+        var g3 = ["G", "G", "G"];
+
+        var y1 = ["Y", "Y", "Y"];
+        var y2 = ["Y", "Y", "Y"];
+        var y3 = ["Y", "Y", "Y"];
+
+        var r1 = ["R", "R", "R"];
+        var r2 = ["R", "R", "R"];
+        var r3 = ["R", "R", "R"];
+
+        document.getElementById('out1').innerHTML = b1.join(" ") + '<br>' + b2.join(" ") +"<br>" + b3.join(" ");
+        document.getElementById('out2').innerHTML = w1.join(" ") + '<br>' + w2.join(" ") +"<br>" + w3.join(" ") +"<br>";
+        document.getElementById('out3').innerHTML = o1.join(" ") + '<br>' + o2.join(" ") +"<br>" + o3.join(" ") +"<br>";
+        document.getElementById('out4').innerHTML = g1.join(" ") + '<br>' + g2.join(" ") +"<br>" + g3.join(" ") +"<br>";
+        document.getElementById('out5').innerHTML = y1.join(" ") + '<br>' + y2.join(" ") +"<br>" + y3.join(" ") +"<br>";
+        document.getElementById('out6').innerHTML = r1.join(" ") + '<br>' + r2.join(" ") +"<br>" + r3.join(" ");
 
         var operate = {};
         operate.print = function(str) { 
